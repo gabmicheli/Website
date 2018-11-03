@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link
+  rel="stylesheet"
+  href="style.css">
+  <div class="hero-image">
+  <ul>
+  <a href="http://latinpcs.org/support/">
+   <img src= "latinfull.png"> </img>
+  </a>
+  <div class="btn-group">
+    <a href="home.html"> <button class="button"> Home </button> </a>
+    <a href="Photos.html"> <button class="button" > Photos </button></a>
+    <a href="Videos.html"><button class="button"> Videos </button></a>
+    <a href="Donate.html"><button class="button"> Teacher Thank You </button> </a>
+    <a href="thankyou.html"><button class="button"> Student Thank You </button> </a>
+    </div>
+  </ul>
+  </div>
+  
+
+</head>
+
+
+<body>
+  <h1 class="center"> Thank you so much for donating for us to go to New York!</h1>
+
+  <p class="center"> The purpose of the trip is to have these young minds reflect on the qualities of perseverance and sacrifice. We have three prime targets for the trip: the Tenement Museum, Harlem and the World Trade Center memorial. The students will be requires to reflect on the struggles faced by immigrants coming to the United States during the late 19th and early 20th centuries; the obstacles overcome by Afrian Americans seeking a new destiny in the North after 300 years of slavery and Jim Crow; and the sacrifies made by firefighters and police officers during the extreme trials of September 11, 2001.</p>
+
+  <a href="IMG_7103.jpg"><img src= "IMG_7103.jpg" width="1200" height="700" class="center"> </img></a>
+
+  
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+<script>
+ 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+  
+/*Dropdown*/
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
+
+
+</html>

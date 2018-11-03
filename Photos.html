@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link
+  rel="stylesheet"
+  href="style.css">
+  
+  <div class="hero-image">
+  <ul>
+  
+    <a href="http://latinpcs.org/support/">
+     <img src= "latinfull.png"> </img>
+    </a>
+  
+  <div class="btn-group">
+    <a href="home.html"> <button class="button"> Home </button> </a>
+    <a href="Photos.html"> <button class="button" > Photos </button></a>
+    <a href="Videos.html"><button class="button"> Videos </button></a>
+    <a href="Donate.html"><button class="button"> Teacher Thank You </button> </a>
+    <a href="thankyou.html"><button class="button"> Student Thank You </button> </a>
+    
+      
+  </div>
+  </ul>
+  </div>
+
+</head>
+
+
+<body>
+  <h1> Photos From The Trip</h1>
+  
+  <div class="row">
+  <div class="column">
+    
+    <a href="CFA.jpg"><img src="CFA.jpg" alt="Come From Away" style="width:100%"></a>
+    <a href="times.jpg"><img src="times.jpg" alt="Times" style="width:100%"></a>
+    <a href="tour.jpg"><img src="tour.jpg" alt="Tour" style="width:100%"></a>
+    <a href="IMG-1099.JPG"><img src="IMG-1099.JPG" alt="Harlem Tour" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="IMG_7091.jpg"><img src="IMG_7091.jpg" alt="Tour" style="width:100%"></a>
+    <a href="IMG_7094.jpg"><img src="IMG_7094.jpg" alt="Tour of Harlem" style="width:100%"></a>
+    <a href="sky.jpeg"><img src="sky.jpeg" alt="Sky" style="width:100%"></a>
+    <a href="kids3.jpg"><img src="kids3.jpg" alt="Kids3"  style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="IMG_7095"><img src="IMG_7095.jpg" alt="Tour" style="width:100%"></a>
+    <a href="skyline.JPG"><img src="skyline.JPG" alt="Skyline" style="width:100%"></a>
+    <a href="church.jpeg"><img src="church.jpeg" alt="Church" style="width:100%"></a>
+    <a href="tour2.jpg"><img src="tour2.jpg" alt="Tour2" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="more.JPG"><img src="more.JPG" alt="More" style="width:100%"></a>
+    <a href="mural.jpeg"><img src="mural.jpeg" alt="Mural" style="width:100%"></a>
+    <a href="tenement.jpg"><img src="tenement.jpg" alt="Tenement" style="width:100%"></a>
+    <a href="apollo.JPG"><img src="apollo.JPG" alt="Tour" style="width:100%"></a>
+  </div>
+</div>
+  
+  
+  
+  
+  
+  
+ 
+  
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+  
+  
+  
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+
+
+</html>
