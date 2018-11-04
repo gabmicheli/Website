@@ -32,42 +32,67 @@
 <body>
   <h1> Photos From The Trip</h1>
   
-  <div class="row">
-  <div class="column">
+  <h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img_woods_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img_5terre_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img_mountains_wide.jpg" style="width:100%">
+  </div>
     
-    <a href="CFA.jpg"><img src="CFA.jpg" alt="Come From Away" style="width:100%"></a>
-    <a href="times.jpg"><img src="times.jpg" alt="Times" style="width:100%"></a>
-    <a href="tour.jpg"><img src="tour.jpg" alt="Tour" style="width:100%"></a>
-    <a href="IMG-1099.JPG"><img src="IMG-1099.JPG" alt="Harlem Tour" style="width:100%"></a>
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img_lights_wide.jpg" style="width:100%">
   </div>
-  <div class="column">
-    <a href="IMG_7091.jpg"><img src="IMG_7091.jpg" alt="Tour" style="width:100%"></a>
-    <a href="IMG_7094.jpg"><img src="IMG_7094.jpg" alt="Tour of Harlem" style="width:100%"></a>
-    <a href="sky.jpeg"><img src="sky.jpeg" alt="Sky" style="width:100%"></a>
-    <a href="kids3.jpg"><img src="kids3.jpg" alt="Kids3"  style="width:100%"></a>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="width:100%">
   </div>
-  <div class="column">
-    <a href="IMG_7095"><img src="IMG_7095.jpg" alt="Tour" style="width:100%"></a>
-    <a href="skyline.JPG"><img src="skyline.JPG" alt="Skyline" style="width:100%"></a>
-    <a href="church.jpeg"><img src="church.jpeg" alt="Church" style="width:100%"></a>
-    <a href="tour2.jpg"><img src="tour2.jpg" alt="Tour2" style="width:100%"></a>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="width:100%">
   </div>
-  <div class="column">
-    <a href="more.JPG"><img src="more.JPG" alt="More" style="width:100%"></a>
-    <a href="mural.jpeg"><img src="mural.jpeg" alt="Mural" style="width:100%"></a>
-    <a href="tenement.jpg"><img src="tenement.jpg" alt="Tenement" style="width:100%"></a>
-    <a href="apollo.JPG"><img src="apollo.JPG" alt="Tour" style="width:100%"></a>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="CFA.jpg" style="width:100%" onclick="currentSlide(1)" alt="Come From Away">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="times.jpg" style="width:100%" onclick="currentSlide(2)" alt="Times Square">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="tour.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tour">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="IMG_7602.JPG" style="width:100%" onclick="currentSlide(4)" alt="World Trade Center">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="IMG_7091.jpg" style="width:100%" onclick="currentSlide(5)" alt="Tenement Tour">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="IMG_7094.jpg" style="width:100%" onclick="currentSlide(6)" alt="Harlem Tour">
+    </div>
   </div>
 </div>
-  
-  
-  
-  
-  
-  
- 
-  
-<div class="clearfix"></div>
 
 <div style="padding:6px;">
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -88,20 +113,38 @@ function topFunction() {
   
   
   
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+  
+  
+  
+  
+  
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
 </body>
