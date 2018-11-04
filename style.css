@@ -291,7 +291,8 @@ img {
 .caption-container {
   text-align: center;
   background-color: #222;
-  padding: 2px 16px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: white;
 }
 
